@@ -9,13 +9,13 @@ This project is focused on creating a real-time sign language detection app that
 - User-Friendly Interface – Runs on Jupyter Notebook for easy execution and visualization.
 
 🛠️ Tech Stack
-    - Programming Language:	Python 
-    - Computer Vision:	OpenCV 
-    - Machine Learning Framework:	TensorFlow/Keras 
-    - Deep Learning Model:	LSTM (Long Short-Term Memory) 
-    - Pose & Hand Tracking:	Mediapipe 
-    - Data Processing:	NumPy & Pandas 
-    - Visualization:	Matplotlib 
+- Programming Language: Python 
+- Computer Vision: OpenCV 
+- Machine Learning Framework: TensorFlow/Keras 
+- Deep Learning Model: LSTM (Long Short-Term Memory) 
+- Pose & Hand Tracking:	Mediapipe 
+- Data Processing: NumPy & Pandas 
+- Visualization: Matplotlib 
 
 🔧 Installation & Setup
 
