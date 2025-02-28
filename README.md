@@ -17,7 +17,7 @@ This project is focused on creating a real-time sign language detection app that
     - Data Processing:	NumPy & Pandas 
     - Visualization:	Matplotlib 
 
-🖥️ Installation & Setup
+🔧Installation & Setup
 1️⃣ Install Dependencies
 Ensure you have Python installed. Then, run the following command:
 pip install opencv-python numpy mediapipe tensorflow scikit-learn matplotlib
@@ -25,11 +25,11 @@ pip install opencv-python numpy mediapipe tensorflow scikit-learn matplotlib
 git clone https://github.com/ShivankBhasin/https://github.com/ShivankBhasin/Sign-Language-Detection-App.git
 cd Sign-Language-Detection-App
 3️⃣ Run the Jupyter Notebook
-- Open the notebook and execute all cells to train the model.
-- Once trained, run the sign detection script to start real-time recognition.
+    - Open the notebook and execute all cells to train the model.
+    - Once trained, run the sign detection script to start real-time recognition.
 
 🎯 How It Works
-1️⃣ Captures real-time video feed using OpenCV.
-2️⃣ Uses Mediapipe to extract keypoints from hands, face, and body.
-3️⃣ Feeds the extracted features into an LSTM model trained on sign gestures.
-4️⃣ Classifies the sign and displays the recognized word on the screen.
+ - Captures real-time video feed using OpenCV.
+ - Uses Mediapipe to extract keypoints from hands, face, and body.
+ - Feeds the extracted features into an LSTM model trained on sign gestures.
+ - Classifies the sign and displays the recognized word on the screen.
