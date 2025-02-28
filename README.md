@@ -22,6 +22,7 @@ This project is focused on creating a real-time sign language detection app that
 1️⃣ Install Dependencies
 
 Ensure you have Python installed. Then, run the following command:
+
 pip install opencv-python numpy mediapipe tensorflow scikit-learn matplotlib
 
 2️⃣ Clone the Repository
