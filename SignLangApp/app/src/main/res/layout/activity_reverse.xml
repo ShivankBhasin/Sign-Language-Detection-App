@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Spinner for selecting sign -->
+    <Spinner
+        android:id="@+id/signSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/performBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perform"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp" />    
+
+    <!-- ImageView to display the selected sign -->
+    <ImageView
+        android:id="@+id/signImageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:contentDescription="@string/sign_image_desc"
+        android:scaleType="centerInside" />
+</LinearLayout>
+
