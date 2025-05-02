@@ -1,42 +1,83 @@
-# Sign-Language-Detection-App
-This project is focused on creating a real-time sign language detection app that can recognize and interpret specific sign gestures from live video. The app will utilize Mediapipe, a framework for building real-time machine learning pipelines, to detect key points of the body, face, and hands. These key points are processed by a Long Short-Term Memory (LSTM) neural network, a type of recurrent neural network (RNN) well-suited for processing sequential data, to predict and classify sign language gestures. 
+# 🤟 Hastavakta: A Real-Time Sign Language Detection Android App
 
-⭐ Features
-- Real-time Gesture Recognition – Detects and classifies sign language gestures from live video.
-- Custom Dataset – Trained on a manually collected dataset of sign gestures.
-- Deep Learning-Based – Uses an LSTM model for accurate sign detection.
-- Mediapipe Integration – Utilizes advanced hand and body tracking for precise keypoint extraction.
-- User-Friendly Interface – Runs on Jupyter Notebook for easy execution and visualization.
+**Hastavakta** is a real-time sign language detection Android application that uses **ConvLSTM-based deep learning** to recognize sign language gestures from live camera input. The app helps bridge the communication gap between sign language users and non-signers, providing an inclusive and accessible communication experience.
 
-🛠️ Tech Stack
-- Programming Language: Python 
-- Computer Vision: OpenCV 
-- Machine Learning Framework: TensorFlow/Keras 
-- Deep Learning Model: LSTM (Long Short-Term Memory) 
-- Pose & Hand Tracking:	Mediapipe 
-- Data Processing: NumPy & Pandas 
-- Visualization: Matplotlib 
+---
 
-🔧 Installation & Setup
+## ⭐ Features
 
-1️⃣ Install Dependencies
+- **Real-time Gesture Recognition** – Detects and classifies sign language gestures from live Android camera feed.
+- **Custom Dataset** – Trained on a manually collected dataset of sign gestures, with temporal keypoint sequences.
+- **Deep Learning-Based** – Uses a ConvLSTM model for capturing spatial and temporal patterns in gestures.
+- **Mediapipe Integration** – Utilizes advanced hand, pose, and face tracking for accurate keypoint extraction.
+- **Android Interface** – Runs as a native mobile app with intuitive UI and real-time prediction feedback.
 
-Ensure you have Python installed. Then, run the following command:
+---
 
-pip install opencv-python numpy mediapipe tensorflow scikit-learn matplotlib
+## 🛠️ Tech Stack
 
-2️⃣ Clone the Repository
+| Category              | Technology                         |
+|----------------------|-------------------------------------|
+| Programming Language  | Java (Android), Python (for model training) |
+| Model Framework       | TensorFlow / Keras (ConvLSTM)      |
+| Pose & Hand Tracking  | Mediapipe                          |
+| Mobile Development    | Android Studio (Java, XML, CameraX)|
+| Model Deployment      | TensorFlow Lite (TFLite)           |
+| UI Components         | ConstraintLayout, ViewFlipper, Buttons, TextViews |
+| Key Libraries         | OpenCV, TFLite, Mediapipe, Android TTS |
 
+---
+
+## 📲 Installation & Setup (Android)
+
+1️⃣ **Clone the Repository**
+
+```bash
 git clone https://github.com/ShivankBhasin/Sign-Language-Detection-App.git
-
 cd Sign-Language-Detection-App
 
-3️⃣ Run the Jupyter Notebook
-- Open the notebook and execute all cells to train the model.
-- Once trained, run the sign detection script to start real-time recognition.
+2️⃣ Open in Android Studio
+
+Launch Android Studio
+
+Select "Open an existing project"
+
+Navigate to SignLangApp folder and open it
+
+3️⃣ Build & Run
+
+Connect your Android device or start an emulator
+
+Click Run ▶ to install and launch the app
 
 🎯 How It Works
- - Captures real-time video feed using OpenCV.
- - Uses Mediapipe to extract keypoints from hands, face, and body.
- - Feeds the extracted features into an LSTM model trained on sign gestures.
- - Classifies the sign and displays the recognized word on the screen.
+Live Camera Input: The app captures real-time video using Android's CameraX API.
+
+Pose Detection: Mediapipe detects hand, pose, and face keypoints from each frame.
+
+Keypoint Processing: Frames are converted into structured arrays of 3D coordinates.
+
+ConvLSTM Prediction: A trained TFLite model processes temporal sequences of keypoints to classify gestures.
+
+Real-time Output: The app displays the predicted sign and adds it to a rolling sentence with optional text-to-speech output.
+
+📁 App Structure Highlights
+SignLangApp/
+├── app/
+│   ├── java/com/example/signlangapp/
+│   │   ├── MainActivity.java             # Splash screen + user role prompt
+│   │   ├── SignDetectionActivity.java    # Core real-time detection logic
+│   │   └── ReverseSignActivity.java      # Converts text back into sign visuals
+│   └── res/
+│       ├── layout/                       # XML layout files
+│       ├── values/                       # Strings, themes
+│       └─
+
+
+
+─ drawable/                     # Sign images (for reverse mode)
+├── assets/
+│   └── convlstm_model.tflite             # Trained TFLite model
+
+📷 Demo
+https://github.com/user-attachments/assets/acce5a4c-ed4b-4dfb-b848-0ac0ddd2b91f
