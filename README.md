@@ -32,16 +32,17 @@
 
 SignLangApp/
 ├── app/
-│ ├── java/com/example/signlangapp/
-│ │ ├── MainActivity.java # Splash screen + user role prompt
-│ │ ├── SignDetectionActivity.java # Core real-time detection logic
-│ │ └── ReverseSignActivity.java # Converts text back into sign visuals
-│ └── res/
-│ ├── layout/ # XML layout files
-│ ├── values/ # Strings, themes
-│ └── drawable/ # Sign images (for reverse mode)
+│   ├── java/com/example/signlangapp/
+│   │   ├── MainActivity.java             # Splash screen + user role prompt
+│   │   ├── SignDetectionActivity.java    # Core real-time detection logic
+│   │   └── ReverseSignActivity.java      # Converts text back into sign visuals
+│   └── res/
+│       ├── layout/                       # XML layout files
+│       ├── values/                       # Strings, themes
+│       └── drawable/                     # Sign images (for reverse mode)
 ├── assets/
-│ └── convlstm_model.tflite # Trained TFLite model
+│   └── convlstm_model.tflite             # Trained TFLite model
+
 
 ## 🎯 How It Works
 
@@ -55,10 +56,13 @@ SignLangApp/
 
 - **Real-time Output**: The app displays the predicted sign and adds it to a rolling sentence with optional text-to-speech output.
 
-## 🔧 Installation & Setup
+📷 Demo
+https://github.com/user-attachments/assets/a3ef82ee-97b8-408d-94e1-b7106c1758ba
 
+## 🔧 Installation & Setup
+```bash
 1️⃣ **Clone the Repository**
-    ```bash
+
     git clone https://github.com/ShivankBhasin/Sign-Language-Detection-App.git
     cd Sign-Language-Detection-App
 
@@ -70,6 +74,3 @@ SignLangApp/
 3️⃣ Build & Run
   -Connect your Android device or start an emulator
   -Click Run ▶ to install and launch the app
-
-📷 Demo
-https://github.com/user-attachments/assets/a3ef82ee-97b8-408d-94e1-b7106c1758ba
